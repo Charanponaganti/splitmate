@@ -1,0 +1,16 @@
+node_modules
+.next
+.data
+.git
+.github
+.cursor
+.expo
+mobile
+coverage
+*.md
+.env*
+!.env.example
+gradle-build.log
+**/android
+**/ios
+agent-transcripts

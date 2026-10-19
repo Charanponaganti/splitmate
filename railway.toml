@@ -1,0 +1,12 @@
+# Recommended host for SplitMate: always-on Node + Postgres LISTEN/NOTIFY.
+# Create a project, add a Postgres plugin, set BETTER_AUTH_SECRET + BETTER_AUTH_URL,
+# then deploy. DATABASE_URL is injected automatically from the Postgres plugin.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/login"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
